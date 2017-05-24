@@ -1,0 +1,22 @@
+page-calendar-view {
+  .day-box {
+    width: 40px;
+    border: 2px solid gainsboro;
+    display: inline-block;
+    text-align: center;
+    height: 30px;
+    padding-top: 4px;
+    color: #999;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-left: 2px;
+    &.active {
+      border: 2px solid #427feb;
+      color: #427feb;
+    }
+  }
+  .week-container {
+    padding: 10px;
+  }
+}

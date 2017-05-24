@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>My Week</ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only color="dark" (click)="navigateOngoing()">
+        <ion-icon name="ios-list-box-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="week-container">
+    <div class="day-box" [ngClass]="{ 'active': activeDayFlag === 1 }" (click)="activeDay(1)">MON</div>
+    <div class="day-box" [ngClass]="{ 'active': activeDayFlag === 2 }" (click)="activeDay(2)">TUE</div>
+    <div class="day-box" [ngClass]="{ 'active': activeDayFlag === 3 }" (click)="activeDay(3)">WED</div>
+    <div class="day-box" [ngClass]="{ 'active': activeDayFlag === 4 }" (click)="activeDay(4)">THU</div>
+    <div class="day-box" [ngClass]="{ 'active': activeDayFlag === 5 }" (click)="activeDay(5)">FRI</div>
+    <div class="day-box" [ngClass]="{ 'active': activeDayFlag === 6 }" (click)="activeDay(6)">SAT</div>
+    <div class="day-box" [ngClass]="{ 'active': activeDayFlag === 7 }" (click)="activeDay(7)">SUN</div>
+  </div>
+  <ion-list>
+    <ion-list-header>
+      To Do
+    </ion-list-header>
+    <ion-item-sliding #globalItem *ngFor="let item of items; let i = index">
+      <ion-item>
+        <ion-label>{{item.text}}</ion-label>
+        <ion-checkbox checked="{{item.done}}" (click)="tickItem(item)"></ion-checkbox>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="deleteItem(item)">Delete</button>
+      </ion-item-options>
+      <ion-item-options side="left">
+        <button ion-button color="default" (click)="unscheduleItem(item)">Unschedule</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

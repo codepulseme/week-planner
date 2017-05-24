@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ongoing
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="dark" (click)="navigateCalendar()">
+        <ion-icon name="md-calendar"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list #alllist>
+    <ion-list-header>
+      To Do
+    </ion-list-header>
+    <ion-item-sliding #globalItem *ngFor="let item of items; let i = index">
+      <ion-item>
+        <ion-label>{{item.text}}</ion-label>
+        <ion-checkbox checked="{{item.done}}" (click)="tickItem(item)"></ion-checkbox>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="deleteItem(item)">Delete</button>
+      </ion-item-options>
+      <ion-item-options side="left">
+        <button ion-button color="default" (click)="presentPopover($event, 0, item, i)">This Week</button>
+        <button ion-button color="light" (click)="presentPopover($event, 1, item, i)">Next Week</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <form (ngSubmit)="addItem(input)">
+    <ion-input #input (focusout)="unFocusInput($event)" [ngClass]="{'hide': hideInput}"></ion-input>
+     <button ion-button full color="light" type="submit" class="hide">ADD</button>
+  </form>
+  <ion-fab class="hide-on-keyboard-open">
+    <button ion-fab (click)="addAction(input)"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,23 @@
+page-popover {
+  .specific-day {
+    padding: 5px;
+    cursor: pointer;
+    &.activeDay {
+      font-weight: 500;
+      color: #427feb;
+    }
+  }
+  .days-container {
+    height: 40px;
+    padding-top: 11px;
+    margin-left: 7px;
+  }
+  ion-icon {
+    margin-left: 13px;
+    font-weight: 600;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+  }
+}

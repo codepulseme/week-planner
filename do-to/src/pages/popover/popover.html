@@ -1,0 +1,9 @@
+<div class="days-container">
+  <span class="specific-day" [ngClass]="{ 'active': activeDay === 1 }" (click)="pickDay(1)">MON</span>
+  <span class="specific-day" [ngClass]="{ 'active': activeDay === 2 }" (click)="pickDay(2)">TUE</span>
+  <span class="specific-day" [ngClass]="{ 'active': activeDay === 3 }" (click)="pickDay(3)">WED</span>
+  <span class="specific-day" [ngClass]="{ 'active': activeDay === 4 }" (click)="pickDay(4)">THU</span>
+  <span class="specific-day" [ngClass]="{ 'active': activeDay === 5 }" (click)="pickDay(5)">FRI</span>
+  <span class="specific-day" [ngClass]="{ 'active': activeDay === 6 }" (click)="pickDay(6)">SAT</span>
+  <span class="specific-day" [ngClass]="{ 'active': activeDay === 0 }" (click)="pickDay(0)">SUN</span>
+</div>
