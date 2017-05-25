@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/cp-todo-backend/cp-todo-backend.iml" filepath="$PROJECT_DIR$/cp-todo-backend/cp-todo-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/week-planner.iml" filepath="$PROJECT_DIR$/.idea/week-planner.iml" />
     </modules>
   </component>
