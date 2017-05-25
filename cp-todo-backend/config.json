@@ -2,19 +2,10 @@
   "dev": {
     "port": 5000,
     "firebase": {
-      "admin-sdk": "cp-todo-dev-firebase-adminsdk-0qs6e-8622dc8d93.json",
-      "databaseURL": "https://cp-todo-dev.firebaseio.com",
+      "admin-sdk": "cp-todo-dev-66d1d-firebase-adminsdk-ogpgz-ba6fd231ca.json",
+      "databaseURL": "https://cp-todo-dev-66d1d.firebaseio.com",
       "fcm": {
-        "serverKey": "AIzaSyBoauh6Ml9NNCy006y6hwmEc9hFCQH7IT0",
-        "url": "https://fcm.googleapis.com/fcm/send"
-      }
-    }
-  },
-  "newsdit": {
-    "port": 5000,
-    "firebase": {
-      "fcm": {
-        "serverKey": "AIzaSyBhlnkrWsGEOTH4YTmrOq2zdoOnzZoIJgo",
+        "serverKey": "AIzaSyAdWZsw6nmBH_D5MbvJl8Q3YRZvsFRA5lA",
         "url": "https://fcm.googleapis.com/fcm/send"
       }
     }
@@ -22,10 +13,10 @@
   "prod": {
     "port": 8000,
     "firebase": {
-      "admin-sdk": "cp-todo-firebase-adminsdk-vi744-07dfd31add.json",
-      "databaseURL": "https://cp-todo.firebaseio.com",
+      "admin-sdk": "cp-todo-2eecf-firebase-adminsdk-1li7o-0bdc2fac24.json",
+      "databaseURL": "https://cp-todo-2eecf.firebaseio.com",
       "fcm": {
-        "serverKey": "AIzaSyCJCEmBUuTzPHcYaAmoaxPp5BlhkvcUfms",
+        "serverKey": "AIzaSyAOy2HsXhIwgu-KYEMKJBnBEk_7c5I4A5Q",
         "url": "https://fcm.googleapis.com/fcm/send"
       }
     }

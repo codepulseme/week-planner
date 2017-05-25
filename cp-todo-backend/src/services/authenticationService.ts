@@ -1,8 +1,9 @@
 var admin = require('firebase-admin');
-const serviceAccount = require("../../cp-todo-firebase-adminsdk-vi744-07dfd31add.json");
+const firebaseConfigs = require('../../config.json')[process.env.NODE_ENV || 'dev']['firebase'];
+const serviceAccount = require("../../".concat(firebaseConfigs['admin-sdk']));
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://cp-todo.firebaseio.com/"
+    databaseURL: firebaseConfigs['databaseURL']
 });
 
 class AuthenticationService {
